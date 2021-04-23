@@ -1,0 +1,46 @@
+FI -- Introduced JDK 1.8                 //devdocs.io
+having only one Abstract methods.
+it is denoted by @FI
+
+u can create ur own interface.
+@Fi--- if u dont mention thz, and u put one abstract method in interface
+ java compiler automatically considered as FI.
+ 
+ /*Function Interface :
+ Interface - Function<T,R> , Signature - R apply(T t) , Example - Arrays :: asList , Integer :: toBinaryString */ 
+ 
+ /* BinaryOperator Interface :
+ Interface - BinaryOperator<T> , Signature - T apply(T t1, T t2) , Example - BigInteger :: add, Math :: pow
+ SubInterface of BiFunction interface. so, it extend BiFunction Interface.
+ 
+ @FunctionalInterface
+ public interface BinaryOperator<T>
+ extends BiFunction<T,T,T>*/
+ 
+ /* UnaryOperator Interface :
+ Interface -  UnaryOperator<T> , Signature - T apply(T t) , Example - String :: toLowerCase, Math :: tan
+ 
+ @FunctionalInterface
+ public interface UnaryOperator<T>
+ extends Function<T,T>*/
+   
+ /* Predicate Interface :  
+ Interface - Predicate<T,U> , Signature - boolean test(T t, U u) , Example - String :: isEmpty, Character :: isDigit
+  
+  @FunctionalInterface
+ public interface Predicate<T> */
+ 
+ /* Consumer Interface : which consume something
+ Interface - Consumer<T> , Signature - void accept(T t) , Example - System.out::println, Error::printStackTrace
+ 
+ @FunctionalInterface
+ public interface Consumer<T>
+ */ 
+ 
+ /* Supplier Interface : will take nothing, but it return something...represent Supplier of result.
+ Interface - Supplier<T>, Signature - T get(), Example - LocalDate :: now, Instant :: now
+ 
+ @FunctionalInterface
+ public interface Supplier<T>
+ */
+  
